@@ -1,16 +1,53 @@
-# React + Vite
+## Interactive Wall Calendar Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/1ec8823e15654c409bc5c743f897b870" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-Currently, two official plugins are available:
+**Live Demo Link**: https://interative-calender-component.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Project Overview
+This project is a high-fidelity, interactive React component designed to emulate the aesthetic and functionality of a physical wall calendar. It was built using Vite, React, Tailwind CSS, and Framer Motion. The component balances a creative design anchor with robust utility, featuring month-based date range selection and persistent, date-specific note-taking.
 
-## React Compiler
+### Core Features
+* **Physical Calendar Aesthetic:** Includes a 3D-styled spiral binding, a hero image section with geometric SVG overlays, and a lined-paper memo area.
+* **Native Date Logic:** Implemented entirely using the native JavaScript Date object and Intl.DateTimeFormat API, ensuring zero reliance on external date libraries like date-fns or moment.
+* **Interactive Range Selector:** Users can select a start and end date. The UI dynamically highlights the selected range with theme-specific accents.
+* **Date-Specific Memos:** A persistent notes section that saves content to LocalStorage. Notes are uniquely keyed to specific date ranges, allowing users to keep different memos for different periods.
+* **Dynamic Theming:** Features a theme-switching engine that extraction-extracts accent colors and adjusts the entire UI (backgrounds, text colors, and hero images) accordingly.
+* **Indian National Holidays:** Integrated markers for major Indian holidays (e.g., Republic Day, Independence Day) with hover-activated tooltips.
+* **Responsive Architecture:** A mobile-first layout that collapses into a vertical stack on smaller screens while maintaining a fixed-height container to prevent layout shifting during transitions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Technical Stack
+* **Framework:** React (Vite)
+* **Styling:** Tailwind CSS (Utility-first CSS)
+* **Animations:** Framer Motion (Month transitions and entry effects)
+* **Icons:** Lucide React
+* **State Management:** React Hooks (useState, useEffect)
+* **Persistence:** Browser LocalStorage API
 
-## Expanding the ESLint configuration
+### Installation and Setup
+To run this project locally, follow these steps:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```bash
+   git clone [repository-link]
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd [project-folder-name]
+   ```
+
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+### Implementation Details
+* **Grid Consistency:** The calendar grid is hard-coded to render 42 days (6 rows). This ensures that the component height remains identical regardless of the month length or starting day, providing a stable user experience.
+* **Accessibility:** Buttons and interactive elements include hover states and focus rings. Muted colors are used for days belonging to the previous or next month to provide clear visual hierarchy.
+* **Performance:** By using native Date math instead of heavy libraries, the component maintains a smaller bundle size and faster execution time.
