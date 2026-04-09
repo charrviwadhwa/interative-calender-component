@@ -1,8 +1,8 @@
 ## Interactive Wall Calendar Component
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/1ec8823e15654c409bc5c743f897b870" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
 **Live Demo Link**: https://interative-calender-component.vercel.app/
+
+**Video Demonstation** : https://www.loom.com/share/1ec8823e15654c409bc5c743f897b870
 
 ### Project Overview
 This project is a high-fidelity, interactive React component designed to emulate the aesthetic and functionality of a physical wall calendar. It was built using Vite, React, Tailwind CSS, and Framer Motion. The component balances a creative design anchor with robust utility, featuring month-based date range selection and persistent, date-specific note-taking.
